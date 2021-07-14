@@ -1,0 +1,6 @@
+.hider {
+  z-index: 1000;
+  height: 40px;
+  transform: translateY(-80px);
+  background-color: white;
+}
