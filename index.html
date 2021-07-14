@@ -23,9 +23,9 @@
 		
     </head>
     <body>
-        <div id="pbiTarget" class="hider"></div>
+        <div id="pbiTarget"></div>
 	
-	<p>Test 3.6</p>
+	<p>Test 3.7</p>
         <script src="mobile-detect.min.js"></script>
 
         <script>
@@ -52,6 +52,7 @@
                 {
                     // Not Mobile
                     document.getElementById("pbiTarget").innerHTML = mobileNoHtml;
+		    document.getElementById("pbiTarget").className = "hider";
                 }
                 else
                 {
