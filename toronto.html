@@ -152,12 +152,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div  id="mapContainerInner">
         <div class="mapOverlay"></div>	
         <iframe title="Match your skills to regional tech ecosystems." id="mapContainerIframe" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiYzcyZjcwYTItMTA3ZS00OWQ4LWFlNTUtNzE0OWQ5YTM4YTk3IiwidCI6ImI1ZGFlNTY2LWFkOGYtNDRlMS05OTI5LTU2NjlmMWRiYjM0MyJ9&pageName=ReportSection3e32bd8069865b94a9a0" 
-        scrolling="no" frameborder="0" style="width: 1551.08px; height: 1008.53px;"></iframe>	
+        src="https://app.powerbi.com/view?r=eyJrIjoiNzU5NzMxMGMtM2YyMi00MmUzLWExYzItZDg1MmM5OTVhOTM4IiwidCI6ImI1ZGFlNTY2LWFkOGYtNDRlMS05OTI5LTU2NjlmMWRiYjM0MyJ9" 
+        scrolling="no" frameborder="0"></iframe>	
         </div>
                                     
                             </div>
 
+<script>
+								$(function(){
+									
+								// dynamically set map iframe size
+								var changeWidth = setTimeout(function () {
+									change_Width();
+								}, 100);
+								
+									function change_Width(){
+									var newWidth = $("#mapContainer").width();
+									//alert(newWidth);
+									$("#mapContainerIframe,.mapOverlay, #mapContainerInner").width(newWidth);
+									var newHeight = ((newWidth * 0.95) + 50);
+									$("#mapContainerIframe,.mapOverlay, #mapContainerInner").height(newHeight);
+									var fadeOut = setTimeout(function () {
+										fade_out();
+									}, 1000);		
+								}
+									
+								function fade_out(){
+									$(".mapOverlay").fadeOut(1500);
+								}
+										
+								});	
+								
+								</script>
 
 
         </body>
