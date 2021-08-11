@@ -115,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </header>
 
         <section class="page-header d-flex flex-column text-white">
-            <div class="lining" style="background-image: linear-gradient(30deg,  rgba(68, 0, 88, 0.85), rgba(2, 64, 187, 0.75)), url('assets/images/ottawa.jpeg')">
+            <div class="lining" style="background-image: linear-gradient(30deg,  rgba(68, 0, 88, 0.85), rgba(2, 64, 187, 0.75)), url('assets/images/toronto.jpeg')">
                 <div class="content">
                                             <div class="breadcrumbs d-none d-lg-block">
                         <div class="container">
@@ -124,7 +124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="container page-header-inner">
                         <div class="row">
                                                 <div class="col-11 mx-auto col-sm-11 mx-sm-0 col-md-10 col-lg-8 col-xl-7">
-                                                    <h1 class="mb-3">Ottawa</h1>
+                                                    <h1 class="mb-3">Toronto Mobile</h1>
                                                                                     
                                     <p class="lead summary mb-0 w-100" id="page_summary">Insights, statistics, and ICT job data across Canada’s&nbsp;regions.</p>
                                     
@@ -147,17 +147,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="row">
                                 <div id="mapContainer" class="border-right ml-xl-auto">
                                     <h2>About the city</h2>
-                                    <p>Ottawa is Canada’s capital, in the east of southern Ontario, near the city of Montréal and the U.S. border. Sitting on the Ottawa River, it has at its centre Parliament Hill, with grand Victorian architecture and museums such as the National Gallery of Canada, with noted collections of indigenous and other Canadian art. The park-lined Rideau Canal is filled with boats in summer and ice-skaters in winter</p>
+                                    <p>Toronto, the capital of the province of Ontario, is a major Canadian city along Lake Ontario’s northwestern shore. It's a dynamic metropolis with a core of soaring skyscrapers, all dwarfed by the iconic, free-standing CN Tower. Toronto also has many green spaces, from the orderly oval of Queen’s Park to 400-acre High Park and its trails, sports facilities and zoo.</p>
         
         <div  id="mapContainerInner">
         <div class="mapOverlay"></div>	
-		<iframe title="Match your skills to regional tech ecosystems." id="mapContainerIframe" 
-		src="https://app.powerbi.com/view?r=eyJrIjoiZGVhNGUxNTgtMzk0MC00YjIwLWI3YmUtN2NmNmYyY2Y1NTM1IiwidCI6ImI1ZGFlNTY2LWFkOGYtNDRlMS05OTI5LTU2NjlmMWRiYjM0MyJ9" 
-        scrolling="no" frameborder="0" style="width: 1551.08px; height: 1008.53px;"></iframe>
+        <iframe title="Match your skills to regional tech ecosystems." id="mapContainerIframe" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiMWE2ZjZhZmEtNzJmYy00ODg3LTk0ZWEtNjIxMzFkZTE0NGVmIiwidCI6ImI1ZGFlNTY2LWFkOGYtNDRlMS05OTI5LTU2NjlmMWRiYjM0MyJ9" 
+        scrolling="no" frameborder="0"></iframe>	
         </div>
                                     
                             </div>
 
+<script>
+								$(function(){
+									
+								// dynamically set map iframe size
+								var changeWidth = setTimeout(function () {
+									change_Width();
+								}, 100);
+								
+									function change_Width(){
+									var newWidth = $("#mapContainer").width();
+									//alert(newWidth);
+									$("#mapContainerIframe,.mapOverlay, #mapContainerInner").width(newWidth);
+									var newHeight = ((newWidth * 0.95) + 50);
+									$("#mapContainerIframe,.mapOverlay, #mapContainerInner").height(newHeight);
+									var fadeOut = setTimeout(function () {
+										fade_out();
+									}, 1000);		
+								}
+									
+								function fade_out(){
+									$(".mapOverlay").fadeOut(1500);
+								}
+										
+								});	
+								
+								</script>
 
 
         </body>
