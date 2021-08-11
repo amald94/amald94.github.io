@@ -115,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </header>
 
         <section class="page-header d-flex flex-column text-white">
-            <div class="lining" style="background-image: linear-gradient(30deg,  rgba(68, 0, 88, 0.85), rgba(2, 64, 187, 0.75)), url('assets/images/quebec.jpeg')">
+            <div class="lining" style="background-image: linear-gradient(30deg,  rgba(68, 0, 88, 0.85), rgba(2, 64, 187, 0.75)), url('assets/images/toronto.jpeg')">
                 <div class="content">
                                             <div class="breadcrumbs d-none d-lg-block">
                         <div class="container">
@@ -124,7 +124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="container page-header-inner">
                         <div class="row">
                                                 <div class="col-11 mx-auto col-sm-11 mx-sm-0 col-md-10 col-lg-8 col-xl-7">
-                                                    <h1 class="mb-3">Halifax</h1>
+                                                    <h1 class="mb-3">Toronto Mobile</h1>
                                                                                     
                                     <p class="lead summary mb-0 w-100" id="page_summary">Insights, statistics, and ICT job data across Canada’s&nbsp;regions.</p>
                                     
@@ -147,17 +147,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="row">
                                 <div id="mapContainer" class="border-right ml-xl-auto">
                                     <h2>About the city</h2>
-                                    <p>Halifax, an Atlantic Ocean port in eastern Canada, is the provincial capital of Nova Scotia. A major business centre, it’s also known for its maritime history. The city’s dominated by the hilltop Citadel, a star-shaped fort completed in the 1850s. Waterfront warehouses known as the Historic Properties recall Halifax’s days as a trading hub for privateers, notably during the War of 1812.</p>
+                                    <p>Toronto, the capital of the province of Ontario, is a major Canadian city along Lake Ontario’s northwestern shore. It's a dynamic metropolis with a core of soaring skyscrapers, all dwarfed by the iconic, free-standing CN Tower. Toronto also has many green spaces, from the orderly oval of Queen’s Park to 400-acre High Park and its trails, sports facilities and zoo.</p>
         
         <div  id="mapContainerInner">
         <div class="mapOverlay"></div>	
-		<iframe title="Match your skills to regional tech ecosystems." id="mapContainerIframe" 
-		src="https://app.powerbi.com/view?r=eyJrIjoiNzU3NmQ5YWYtYzJkYi00ZDNhLWE2YzAtNGNjNWExMGU2Y2M5IiwidCI6ImI1ZGFlNTY2LWFkOGYtNDRlMS05OTI5LTU2NjlmMWRiYjM0MyJ9" 
-        scrolling="no" frameborder="0" style="width: 1551.08px; height: 1008.53px;"></iframe>
+        <iframe title="Match your skills to regional tech ecosystems." id="mapContainerIframe" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiNjA5YjY5ZDEtNmM3OC00MDU3LWIyZjctOWRjM2EwNjc0ZTI4IiwidCI6ImI1ZGFlNTY2LWFkOGYtNDRlMS05OTI5LTU2NjlmMWRiYjM0MyJ9" 
+        scrolling="no" frameborder="0"></iframe>	
         </div>
                                     
                             </div>
 
+<script>
+								$(function(){
+									
+								// dynamically set map iframe size
+								var changeWidth = setTimeout(function () {
+									change_Width();
+								}, 100);
+								
+									function change_Width(){
+									var newWidth = $("#mapContainer").width();
+									//alert(newWidth);
+									$("#mapContainerIframe,.mapOverlay, #mapContainerInner").width(newWidth);
+									var newHeight = ((newWidth * 0.95) + 50);
+									$("#mapContainerIframe,.mapOverlay, #mapContainerInner").height(newHeight);
+									var fadeOut = setTimeout(function () {
+										fade_out();
+									}, 1000);		
+								}
+									
+								function fade_out(){
+									$(".mapOverlay").fadeOut(1500);
+								}
+										
+								});	
+								
+								</script>
 
 
         </body>
