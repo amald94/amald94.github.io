@@ -3842,7 +3842,7 @@
  "id": "E090000030"
  },
 {"type": "Feature",
- "geometry": {"type": "Polygon",
+ "geometry": {"type": "MultiPolygon",
   "coordinates": [[[[-125.733459, 54.227583],
      [-125.733767, 54.227722],
      [-125.73383, 54.228659],
