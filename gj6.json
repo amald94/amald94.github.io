@@ -1,7 +1,7 @@
 {"type":"FeatureCollection", "features": [
-{'type': 'Feature',
- 'geometry': {'type': 'Polygon',
-  'coordinates': [[[-123.153407, 50.040527],
+{"type": "Feature",
+ "geometry": {"type": "Polygon",
+  "coordinates": [[[-123.153407, 50.040527],
     [-123.126043, 50.04053],
     [-123.124923, 50.040529],
     [-123.124037, 50.040529],
@@ -93,10 +93,10 @@
     [-123.153408, 50.102028],
     [-123.153403, 50.065621],
     [-123.153407, 50.040527]]]},
- 'properties': {'LAD13CD': 'E09000000',
-  'LAD13CDO': '000AD',
-  'LAD13NM': 'whistler',
-  'LAD13NMW': 'null'},
- 'id': 'E09000000'}
+ "properties": {"LAD13CD": "E09000000",
+  "LAD13CDO": "000AD",
+  "LAD13NM": "whistler",
+  "LAD13NMW": "null"},
+ "id": "E09000000"}
 
 ]}
