@@ -3812,7 +3812,7 @@
  },
 
  {"type": "Feature",
- "geometry": {"type": "MultiPolygon",
+ "geometry": {"type": "Polygon",
   "coordinates": [[[[-128.58325, 54.487849],
      [-128.583336, 54.48785],
      [-128.595746, 54.487976],
