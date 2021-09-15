@@ -3248,7 +3248,7 @@
  },
 
 {"type": "Feature",
- "geometry": {"type": "Polygon",
+ "geometry": {"type": "MultiPolygon",
   "coordinates": [[[-122.650548, 53.931691],
     [-122.65507, 53.931651],
     [-122.662582, 53.931586],
